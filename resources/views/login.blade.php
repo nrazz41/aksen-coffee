@@ -97,7 +97,7 @@
             </div>
         @endif
 
-        <img src="img/icon.png" alt="icon-aksen-coffee" class="login-icon">
+        <img src="{{ asset('assets/img/icon.png') }}" alt="icon-aksen-coffee" class="login-icon">
 
         @if ($errors->any())
             <div class="alert alert-danger" id="flashErrors">

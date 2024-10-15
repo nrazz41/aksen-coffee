@@ -81,7 +81,7 @@
     <div class="container-fluid title-home">
         <h1 class="fw-bold">Aksén Coffee</h1>
         <video autoplay muted loop>
-            <source src="video/aksen-coffee.mp4" type="video/mp4">
+            <source src="{{ asset('assets/video/aksen-coffee.mp4') }}" type="video/mp4">
             Browser Anda tidak mendukung pemutar video.
         </video>
     </div>
@@ -105,7 +105,7 @@
             </div>
 
             <div class="col-md-6 image">
-                <img src="img/foto1.jpg" alt="Coffee" class="img-fluid rounded-3" width="50%">
+                <img src="{{ asset('assets/img/foto1.jpg') }}" alt="Coffee" class="img-fluid rounded-3" width="50%">
             </div>
         </div>
     </div>

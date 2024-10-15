@@ -5,7 +5,7 @@
     <div class="container">
         <!-- Logo di kiri -->
         <a class="navbar-brand" href="#">
-            <img src="img/logo.png" alt="Logo" width="120" class="d-inline-block align-text-top">
+            <img src="{{ asset('assets/img/logo.png') }}" alt="Logo" width="120" class="d-inline-block align-text-top">
         </a>
 
         <!-- Button untuk toggle navbar pada ukuran kecil -->
