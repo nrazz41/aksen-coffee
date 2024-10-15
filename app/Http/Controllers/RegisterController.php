@@ -28,7 +28,6 @@ class RegisterController extends Controller
         ], [
             'confirm_password.same' => 'Password tidak sama', // Pesan kesalahan khusus
         ]);
-        return redirect()->route('halaman-login')->withInput();;
-
+        return redirect()->route('halaman-login')->withInput()->with('success', 'Pendaftaran berhasil!');
     }
 }

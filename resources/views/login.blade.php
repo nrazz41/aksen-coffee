@@ -88,19 +88,25 @@
     </style>
 </head>
 <body>
-
     <div class="login-container" id="loginContainer">
         <h2 class="login-title">Login to Aksén Coffee</h2>
-        
+
+        @if (session('success'))
+            <div class="alert alert-success" id="flashSuccess">
+                {{ session('success') }}
+            </div>
+        @endif
+
         <img src="img/icon.png" alt="icon-aksen-coffee" class="login-icon">
+
         @if ($errors->any())
-        <div class="alert alert-danger">
-            <ul>
-                @foreach ($errors->all() as $error)
-                    <li>{{ $error }}</li>
-                @endforeach
-            </ul>
-        </div>
+            <div class="alert alert-danger" id="flashErrors">
+                <ul>
+                    @foreach ($errors->all() as $error)
+                        <li>{{ $error }}</li>
+                    @endforeach
+                </ul>
+            </div>
         @endif
 
         <form action="{{ route('login') }}" method="POST">
@@ -126,10 +132,31 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script>
         // Show the login container with animation
-            window.onload = function() {
+        window.onload = function() {
             const loginContainer = document.getElementById('loginContainer');
             loginContainer.classList.add('show');
         }
+
+        // Hide flash messages after 3 seconds
+        setTimeout(() => {
+            const flashSuccess = document.getElementById('flashSuccess');
+            const flashErrors = document.getElementById('flashErrors');
+
+            if (flashSuccess) {
+                flashSuccess.style.transition = "opacity 0.5s ease";
+                flashSuccess.style.opacity = 0;
+                setTimeout(() => {
+                    flashSuccess.remove();
+                }, 500); // Remove element after fade out
+            }
+
+            if (flashErrors) {
+                flashErrors.style.transition = "opacity 0.5s ease";
+                flashErrors.style.opacity = 0;
+                setTimeout(() => {
+                    flashErrors.remove();
+                }, 500); // Remove element after fade out
+            }
+        }, 3000); // Delay before starting to fade out
     </script>
 </body>
-</html>

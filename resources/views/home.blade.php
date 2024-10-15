@@ -12,7 +12,7 @@
 <style>
    .title-home {
     color: #283933;
-    margin-top: 20px;
+    margin-top: 70px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -22,6 +22,7 @@
    }
 
    .content-home {
+    
     display: flex;
     justify-content: center;
     align-items: center;
@@ -48,6 +49,7 @@
 
    @media (max-width: 768px) {
       .content-home {
+        margin-top: 70px;
          flex-direction: column;
          text-align: center;
       }
