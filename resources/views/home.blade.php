@@ -47,6 +47,15 @@
 
    }
 
+   @font-face {
+    font-family: 'MyCustomFont';
+    src: url('assets/fonts/MyCustomFont.ttf');
+}
+
+.content{
+    font-family: 'MyCustomFont';
+}
+
    @media (max-width: 768px) {
       .content-home {
         margin-top: 70px;
@@ -92,7 +101,7 @@
             <div class="col-md-6 text">
                 <h1 class="display-5 fw-bold">Welcome to Aksén Coffee</h1>
                 <p>Enjoy the best coffee experience with us!</p>
-                <p>
+                <p class="content">
                     Di Aksén Coffee, kami sangat bersemangat untuk memberikan pengalaman kopi terbaik bagi Anda. 
                     Terletak di jantung kota, kafe kami adalah surga bagi para pecinta kopi, menawarkan suasana 
                     hangat dan mengundang yang sempurna untuk bersantai atau pertemuan santai. Kami memilih biji 
